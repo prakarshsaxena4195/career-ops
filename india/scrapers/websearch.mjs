@@ -51,6 +51,8 @@ export async function scrapeWebSearch() {
 
     const results = extractResults(html);
     for (const { url, title } of results) {
+      // Skip DDG ad redirect URLs — these are not real job links
+      if (url.includes('duckduckgo.com')) continue;
       jobs.push({
         title,
         company: source,
