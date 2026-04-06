@@ -18,8 +18,15 @@ export function normalizeUrl(rawUrl) {
 }
 
 export function normalizeNaukriUrl(rawUrl) {
-  const match = rawUrl.match(/(\d{6,})/);
-  if (match) return `naukri/${match[1]}`;
+  // Extract numeric job ID from the URL path only (not query params or fragments)
+  // Naukri job URLs end with a trailing numeric ID in the path segment
+  try {
+    const url = new URL(rawUrl);
+    const match = url.pathname.match(/(\d{6,})(?:[^/]*)?$/);
+    if (match) return `naukri/${match[1]}`;
+  } catch {
+    // fall through
+  }
   return normalizeUrl(rawUrl);
 }
 

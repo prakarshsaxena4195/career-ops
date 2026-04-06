@@ -64,6 +64,12 @@ test('markSeen: stores title and company', () => {
   assert.equal(store['https://example.com/job'].company, 'Swiggy');
 });
 
+test('normalizeNaukriUrl: ignores digits in query params', () => {
+  const result = normalizeNaukriUrl('https://www.naukri.com/jobs?campaignid=123456789');
+  // Should NOT use the campaign ID as the key — fall back to normalizeUrl
+  assert.equal(result, 'https://www.naukri.com/jobs');
+});
+
 test('markSeen naukri: uses job ID key', () => {
   const store = {};
   const job = {
