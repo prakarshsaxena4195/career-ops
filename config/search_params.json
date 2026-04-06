@@ -1,0 +1,28 @@
+{
+  "positive_titles": [
+    "Senior Product Manager",
+    "Sr PM",
+    "Sr. PM",
+    "SPM",
+    "Sr. Product Manager",
+    "Senior PM",
+    "Lead Product Manager",
+    "Principal Product Manager"
+  ],
+  "negative_titles": [
+    "Junior",
+    "Intern",
+    "Associate",
+    "Fresher",
+    "Entry",
+    "0-2 years",
+    "Data Scientist",
+    "Engineering Manager",
+    "Marketing",
+    "Sales",
+    "Finance"
+  ],
+  "locations": ["Bangalore", "Bengaluru", "Karnataka", "Remote"],
+  "linkedin_experience_filter": "4",
+  "max_pages_per_source": 2
+}

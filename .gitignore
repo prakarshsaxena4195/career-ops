@@ -32,3 +32,8 @@ node_modules/
 .claude/settings.local.json
 .claude/memory/
 career-dashboard
+
+# India scanner
+config/telegram_config.json
+data/scan-history-india.json
+logs/india-scan.log

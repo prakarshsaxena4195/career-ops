@@ -1,0 +1,19 @@
+[
+  { "name": "Flipkart", "careers_url": "https://www.flipkartcareers.com/#!/joblist", "enabled": true },
+  { "name": "Swiggy", "careers_url": "https://careers.swiggy.com/#/", "enabled": true },
+  { "name": "Zomato", "careers_url": "https://www.zomato.com/careers", "enabled": true },
+  { "name": "CRED", "careers_url": "https://careers.cred.club/", "enabled": true },
+  { "name": "PhonePe", "careers_url": "https://careers.phonepe.com/", "enabled": true },
+  { "name": "Razorpay", "careers_url": "https://razorpay.com/jobs/", "enabled": true },
+  { "name": "Zerodha", "careers_url": "https://zerodha.com/careers/", "enabled": true },
+  { "name": "Dream11", "careers_url": "https://www.dream11.com/about/careers", "enabled": true },
+  { "name": "Meesho", "careers_url": "https://meesho.io/jobs", "enabled": true },
+  { "name": "Groww", "careers_url": "https://groww.in/careers", "enabled": true },
+  { "name": "Urban Company", "careers_url": "https://www.urbancompany.com/careers", "enabled": true },
+  { "name": "Paytm", "careers_url": "https://paytm.com/about-us/careers", "enabled": true },
+  { "name": "Ola", "careers_url": "https://www.olacabs.com/careers", "enabled": true },
+  { "name": "ShareChat", "careers_url": "https://careers.sharechat.com/", "enabled": true },
+  { "name": "Dunzo", "careers_url": "https://www.dunzo.com/careers", "enabled": true },
+  { "name": "Porter", "careers_url": "https://porter.in/careers", "enabled": true },
+  { "name": "Licious", "careers_url": "https://www.licious.in/careers", "enabled": true }
+]
