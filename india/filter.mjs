@@ -6,8 +6,12 @@ import { join, dirname } from 'node:path';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export function loadSearchParams() {
-  const path = join(__dirname, '../config/search_params.json');
-  return JSON.parse(readFileSync(path, 'utf8'));
+  const configPath = join(__dirname, '../config/search_params.json');
+  try {
+    return JSON.parse(readFileSync(configPath, 'utf8'));
+  } catch (err) {
+    throw new Error(`search_params.json missing or malformed at ${configPath}: ${err.message}`);
+  }
 }
 
 export function matchesTitle(title, params) {
@@ -18,7 +22,7 @@ export function matchesTitle(title, params) {
 }
 
 export function matchesLocation(location, params) {
-  if (!location) return true;
+  if (location == null) return true;
   const lower = location.toLowerCase();
   return params.locations.some(loc => lower.includes(loc.toLowerCase()));
 }

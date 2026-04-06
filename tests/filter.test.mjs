@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { matchesTitle, matchesLocation, filterJobs } from '../india/filter.mjs';
+import { loadSearchParams, matchesTitle, matchesLocation, filterJobs } from '../india/filter.mjs';
 
 const params = {
   positive_titles: ['Senior Product Manager', 'Sr PM', 'SPM'],
@@ -42,6 +42,18 @@ test('matchesLocation: rejects Mumbai', () => {
 
 test('matchesLocation: null location passes through', () => {
   assert.equal(matchesLocation(null, params), true);
+});
+
+test('matchesLocation: empty string location is rejected (not a passthrough)', () => {
+  assert.equal(matchesLocation('', params), false);
+});
+
+test('loadSearchParams: returns object with required arrays', () => {
+  const p = loadSearchParams();
+  assert.ok(Array.isArray(p.positive_titles));
+  assert.ok(Array.isArray(p.negative_titles));
+  assert.ok(Array.isArray(p.locations));
+  assert.ok(p.positive_titles.length > 0);
 });
 
 test('filterJobs: keeps matching, drops non-matching', () => {
